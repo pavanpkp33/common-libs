@@ -1,4 +1,7 @@
-package com.sdsu.edu.cms.common.models;
+package com.sdsu.edu.cms.common.models.user;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
