@@ -1,6 +1,7 @@
 package com.sdsu.edu.cms.common.models.user;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
@@ -19,7 +20,7 @@ public class User {
     private String title;
     @JsonProperty("email")
     private String email;
-    @JsonProperty("password")
+    @JsonProperty(value = "password", access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     @JsonProperty("address1")
     private String address1;
@@ -199,6 +200,7 @@ public class User {
         this.valid = valid;
     }
 
+    @JsonIgnore
     public Object[] getArray() {
         Object[] arr = {
                 this.id,
@@ -224,5 +226,6 @@ public class User {
 
         return arr;
     }
+
 
 }
