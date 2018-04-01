@@ -1,8 +1,11 @@
 package com.sdsu.edu.cms.common.models.response;
 
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
 public class DataServiceResponse {
 
     private List<Object> data;
