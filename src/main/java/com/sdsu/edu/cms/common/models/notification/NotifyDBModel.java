@@ -1,14 +1,11 @@
 package com.sdsu.edu.cms.common.models.notification;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-public class Notify {
+public class NotifyDBModel {
 
     @JsonProperty("notification_id")
     private String notification_id;
@@ -21,14 +18,11 @@ public class Notify {
     @JsonProperty("subject")
     private String subject;
     @JsonProperty("receiver")
-    @JsonIgnore
-    private List<String> receiver;
+    private String receiver;
     @JsonProperty("notification_type")
-    private List<String> method;
+    private String method;
     @JsonProperty("message")
     private String message;
-    @JsonProperty("email_message")
-    private String email_message;
     @JsonProperty("created_on")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date created_on;
@@ -41,16 +35,7 @@ public class Notify {
     @JsonProperty("is_broadcast")
     private boolean is_broadcast;
 
-    public Notify() {
-    }
-
-
-    public boolean isIs_broadcast() {
-        return is_broadcast;
-    }
-
-    public void setIs_broadcast(boolean is_broadcast) {
-        this.is_broadcast = is_broadcast;
+    public NotifyDBModel() {
     }
 
     public String getNotification_id() {
@@ -59,30 +44,6 @@ public class Notify {
 
     public void setNotification_id(String notification_id) {
         this.notification_id = notification_id;
-    }
-
-    public String getIs_valid() {
-        return is_valid;
-    }
-
-    public void setIs_valid(String is_valid) {
-        this.is_valid = is_valid;
-    }
-
-    public String getHas_seen() {
-        return has_seen;
-    }
-
-    public void setHas_seen(String has_seen) {
-        this.has_seen = has_seen;
-    }
-
-    public String getEmail_message() {
-        return email_message;
-    }
-
-    public void setEmail_message(String email_message) {
-        this.email_message = email_message;
     }
 
     public String getConference_id() {
@@ -117,21 +78,19 @@ public class Notify {
         this.subject = subject;
     }
 
-    public List<String> getReceiver() {
+    public String getReceiver() {
         return receiver;
     }
 
-    public void setReceiver(List<String> receiver) {
-        this.receiver = new ArrayList<>();
+    public void setReceiver(String receiver) {
         this.receiver = receiver;
     }
 
-    public List<String> getMethod() {
+    public String getMethod() {
         return method;
     }
 
-    public void setMethod(List<String> method) {
-        this.method = new ArrayList<>();
+    public void setMethod(String method) {
         this.method = method;
     }
 
@@ -157,5 +116,29 @@ public class Notify {
 
     public void setPriority(String priority) {
         this.priority = priority;
+    }
+
+    public String getIs_valid() {
+        return is_valid;
+    }
+
+    public void setIs_valid(String is_valid) {
+        this.is_valid = is_valid;
+    }
+
+    public String getHas_seen() {
+        return has_seen;
+    }
+
+    public void setHas_seen(String has_seen) {
+        this.has_seen = has_seen;
+    }
+
+    public boolean isIs_broadcast() {
+        return is_broadcast;
+    }
+
+    public void setIs_broadcast(boolean is_broadcast) {
+        this.is_broadcast = is_broadcast;
     }
 }

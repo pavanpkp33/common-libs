@@ -8,6 +8,7 @@ public  class Constants {
 
 
     public static final String INTERNAL_SERVER_ERROR = "internal_server_error";
+    public static final String BAD_REQUEST = "bad_request";
     public enum NotifyMethod { ANNOUNCEMENT, UPDATE, MESSAGE};
 
 }
