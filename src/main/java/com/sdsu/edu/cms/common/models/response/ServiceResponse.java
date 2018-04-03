@@ -6,17 +6,17 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class DataServiceResponse {
+public class ServiceResponse {
 
     private List<Object> data;
     private String message;
 
-    public DataServiceResponse(List<Object> data, String message) {
+    public ServiceResponse(List<Object> data, String message) {
         this.data = data;
         this.message = message;
     }
 
-    public DataServiceResponse() {
+    public ServiceResponse() {
     }
 
     public List<Object> getData() {
