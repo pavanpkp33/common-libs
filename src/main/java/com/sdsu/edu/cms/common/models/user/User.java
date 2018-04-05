@@ -44,9 +44,9 @@ public class User {
     @JsonProperty("is_participating")
     private String is_participating;
     @JsonProperty("valid")
-    private String valid = "Y";
+    private String valid;
     @JsonProperty("is_active")
-    private String is_active = "N";
+    private String is_active;
 
     public String getis_active() {
         return is_active;
@@ -219,9 +219,7 @@ public class User {
                 this.affiliation,
                 this.department,
                 this.dob,
-                this.is_participating,
-                this.valid,
-                this.is_active
+                this.is_participating
         };
 
         return arr;
