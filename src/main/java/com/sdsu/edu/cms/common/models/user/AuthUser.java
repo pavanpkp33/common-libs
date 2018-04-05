@@ -5,8 +5,26 @@ public class AuthUser {
     private String id;
     private String email;
     private String password;
+    private String isValid;
+    private String isActive;
 
     public AuthUser() {
+    }
+
+    public String getIsValid() {
+        return isValid;
+    }
+
+    public void setIsValid(String isValid) {
+        this.isValid = isValid;
+    }
+
+    public String getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(String isActive) {
+        this.isActive = isActive;
     }
 
     public String getId() {
@@ -33,9 +51,11 @@ public class AuthUser {
         this.password = password;
     }
 
-    public AuthUser(String id, String email, String password) {
+    public AuthUser(String id, String email, String password, String isValid, String isActive) {
         this.id = id;
         this.email = email;
         this.password = password;
+        this.isValid = isValid;
+        this.isActive = isActive;
     }
 }

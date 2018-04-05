@@ -35,21 +35,20 @@ public class Notify {
     @JsonProperty("priority")
     private String priority;
     @JsonProperty("is_valid")
-    private String is_valid;
+    private String is_valid = "Y";
     @JsonProperty("has_seen")
-    private String has_seen;
+    private String has_seen= "N";
     @JsonProperty("is_broadcast")
-    private boolean is_broadcast;
+    private String is_broadcast = "N";
 
     public Notify() {
     }
 
-
-    public boolean isIs_broadcast() {
+    public String getIs_broadcast() {
         return is_broadcast;
     }
 
-    public void setIs_broadcast(boolean is_broadcast) {
+    public void setIs_broadcast(String is_broadcast) {
         this.is_broadcast = is_broadcast;
     }
 
