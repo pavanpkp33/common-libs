@@ -19,4 +19,8 @@ public  class Constants {
     public enum NotifyMethod { ANNOUNCEMENT, UPDATE, MESSAGE, ACTIVATION};
 
 
+    public static final String INTERNAL_TOKEN = "X-Token-Internal";
+    public static final String INTERNAL_TOKEN_VALUE = "internal-call";
+
+
 }

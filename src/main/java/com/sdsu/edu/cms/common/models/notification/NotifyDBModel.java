@@ -1,6 +1,7 @@
 package com.sdsu.edu.cms.common.models.notification;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
@@ -33,7 +34,7 @@ public class NotifyDBModel {
     @JsonProperty("has_seen")
     private String has_seen;
     @JsonProperty("is_broadcast")
-    private boolean is_broadcast;
+    private String is_broadcast;
 
     public NotifyDBModel() {
     }
@@ -134,11 +135,31 @@ public class NotifyDBModel {
         this.has_seen = has_seen;
     }
 
-    public boolean isIs_broadcast() {
+    public String getIs_broadcast() {
         return is_broadcast;
     }
 
-    public void setIs_broadcast(boolean is_broadcast) {
+    public void setIs_broadcast(String is_broadcast) {
         this.is_broadcast = is_broadcast;
+    }
+
+    @JsonIgnore
+    public Object[] getArray() {
+        Object[] arr = {
+                this.notification_id,
+                this.subject,
+                this.message,
+                this.created_on,
+                this.sender_id,
+                this.receiver,
+                this.is_broadcast,
+                this.conference_id,
+                this.priority,
+                this.method,
+                this.sender_name
+
+        };
+
+        return arr;
     }
 }
