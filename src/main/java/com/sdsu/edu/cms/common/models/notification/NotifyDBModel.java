@@ -39,6 +39,22 @@ public class NotifyDBModel {
     public NotifyDBModel() {
     }
 
+    public NotifyDBModel(String notification_id, String conference_id, String sender_id, String sender_name, String subject, String receiver, String method, String message, Date created_on, String priority, String is_valid, String has_seen, String is_broadcast) {
+        this.notification_id = notification_id;
+        this.conference_id = conference_id;
+        this.sender_id = sender_id;
+        this.sender_name = sender_name;
+        this.subject = subject;
+        this.receiver = receiver;
+        this.method = method;
+        this.message = message;
+        this.created_on = created_on;
+        this.priority = priority;
+        this.is_valid = is_valid;
+        this.has_seen = has_seen;
+        this.is_broadcast = is_broadcast;
+    }
+
     public String getNotification_id() {
         return notification_id;
     }
