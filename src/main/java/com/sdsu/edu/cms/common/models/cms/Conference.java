@@ -173,6 +173,25 @@ public class Conference {
         this.banner_url = banner_url;
     }
 
+    public Conference(String conference_id, String conference_name, String conference_accronym, int conference_year, String chair_id, Date start_date, Date end_date, String web_link, String valid, String contact, String about, String banner_url, String venue, String city, String country, String submissions_enabled) {
+        this.conference_id = conference_id;
+        this.conference_name = conference_name;
+        this.conference_accronym = conference_accronym;
+        this.conference_year = conference_year;
+        this.chair_id = chair_id;
+        this.start_date = start_date;
+        this.end_date = end_date;
+        this.web_link = web_link;
+        this.valid = valid;
+        this.contact = contact;
+        this.about = about;
+        this.banner_url = banner_url;
+        this.venue = venue;
+        this.city = city;
+        this.country = country;
+        this.submissions_enabled = submissions_enabled;
+    }
+
     @JsonIgnore
     public Object[] getData(){
         return new Object[]{

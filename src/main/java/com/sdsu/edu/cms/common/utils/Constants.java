@@ -10,6 +10,11 @@ public  class Constants {
     public static final String SERVER_NAME = "SDSU-CMS ADMIN";
     public static final String SERVER_CONFERENCE = "SDSU-CMS";
 
+    public static final String ROLE_CHAIR = "ROLE_CHAIR";
+    public static final String ROLE_AUTHOR = "ROLE_AUTHOR";
+    public static final String ROLE_REVIEWER = "ROLE_REVIEWER";
+    public static final String ROLE_ADMIN = "ROLE_ADMIN";
+
     public static final String INTERNAL_SERVER_ERROR = "internal_server_error";
     public static final String BAD_REQUEST = "bad_request";
 
