@@ -6,17 +6,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
-public class Conference {
+public class  Conference {
     @JsonProperty("conference_id")
-    private String conference_id;
+    private String cid;
     @JsonProperty("conference_name")
-    private String conference_name;
+    private String cname;
     @JsonProperty("conference_accronym")
-    private String conference_accronym;
+    private String caccronym;
     @JsonProperty("conference_year")
-    private int conference_year;
+    private int cyear;
     @JsonProperty("chair_id")
-    private String chair_id;
+    private String chair_uid;
     @JsonProperty("start_date")
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date start_date;
@@ -77,44 +77,44 @@ public class Conference {
     public Conference() {
     }
 
-    public String getConference_id() {
-        return conference_id;
+    public String getCid() {
+        return cid;
     }
 
-    public void setConference_id(String conference_id) {
-        this.conference_id = conference_id;
+    public void setCid(String cid) {
+        this.cid = cid;
     }
 
-    public String getConference_name() {
-        return conference_name;
+    public String getCname() {
+        return cname;
     }
 
-    public void setConference_name(String conference_name) {
-        this.conference_name = conference_name;
+    public void setCname(String cname) {
+        this.cname = cname;
     }
 
-    public String getConference_accronym() {
-        return conference_accronym;
+    public String getCaccronym() {
+        return caccronym;
     }
 
-    public void setConference_accronym(String conference_accronym) {
-        this.conference_accronym = conference_accronym;
+    public void setCaccronym(String caccronym) {
+        this.caccronym = caccronym;
     }
 
-    public int getConference_year() {
-        return conference_year;
+    public int getCyear() {
+        return cyear;
     }
 
-    public void setConference_year(int conference_year) {
-        this.conference_year = conference_year;
+    public void setCyear(int cyear) {
+        this.cyear = cyear;
     }
 
-    public String getChair_id() {
-        return chair_id;
+    public String getChair_uid() {
+        return chair_uid;
     }
 
-    public void setChair_id(String chair_id) {
-        this.chair_id = chair_id;
+    public void setChair_uid(String chair_uid) {
+        this.chair_uid = chair_uid;
     }
 
     public Date getStart_date() {
@@ -173,12 +173,12 @@ public class Conference {
         this.banner_url = banner_url;
     }
 
-    public Conference(String conference_id, String conference_name, String conference_accronym, int conference_year, String chair_id, Date start_date, Date end_date, String web_link, String valid, String contact, String about, String banner_url, String venue, String city, String country, String submissions_enabled) {
-        this.conference_id = conference_id;
-        this.conference_name = conference_name;
-        this.conference_accronym = conference_accronym;
-        this.conference_year = conference_year;
-        this.chair_id = chair_id;
+    public Conference(String cid, String cname, String caccronym, int cyear, String chair_uid, Date start_date, Date end_date, String web_link, String valid, String contact, String about, String banner_url, String venue, String city, String country, String submissions_enabled) {
+        this.cid = cid;
+        this.cname = cname;
+        this.caccronym = caccronym;
+        this.cyear = cyear;
+        this.chair_uid = chair_uid;
         this.start_date = start_date;
         this.end_date = end_date;
         this.web_link = web_link;
@@ -195,11 +195,11 @@ public class Conference {
     @JsonIgnore
     public Object[] getData(){
         return new Object[]{
-                this.conference_id,
-                this.conference_name,
-                this.conference_accronym,
-                this.conference_year,
-                this.chair_id,
+                this.cid,
+                this.cname,
+                this.caccronym,
+                this.cyear,
+                this.chair_uid,
                 this.start_date,
                 this.end_date,
                 this.web_link,
