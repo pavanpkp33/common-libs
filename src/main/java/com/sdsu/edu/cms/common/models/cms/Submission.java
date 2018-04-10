@@ -11,6 +11,8 @@ public class Submission {
 
     @JsonProperty("submission_id")
     private String submission_id;
+    @JsonProperty("conference_id")
+    private String cid;
     @JsonProperty("title")
     private String title;
     @JsonProperty("submission_date")
@@ -54,8 +56,9 @@ public class Submission {
     public Submission() {
     }
 
-    public Submission(String submission_id, String title, Date submission_date, String submit_author_id, int track_id, String abstract_text, Date last_updated, String decision_status, String is_paid, String valid, int group_app, String[] keyword, String draftPaperUri, String finalPaperUri, String cameraReadyPaperUri) {
+    public Submission(String submission_id, String cid, String title, Date submission_date, String submit_author_id, int track_id, String abstract_text, Date last_updated, String decision_status, String is_paid, String valid, int group_app, String[] keyword, String draftPaperUri, String finalPaperUri, String cameraReadyPaperUri) {
         this.submission_id = submission_id;
+        this.cid = cid;
         this.title = title;
         this.submission_date = submission_date;
         this.submit_author_id = submit_author_id;
@@ -70,6 +73,14 @@ public class Submission {
         this.draftPaperUri = draftPaperUri;
         this.finalPaperUri = finalPaperUri;
         this.cameraReadyPaperUri = cameraReadyPaperUri;
+    }
+
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
     }
 
     public List<Authors> getAuthorsList() {
