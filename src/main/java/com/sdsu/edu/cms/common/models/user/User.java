@@ -200,6 +200,10 @@ public class User {
         this.valid = valid;
     }
 
+    public String isActive(){
+        if(!this.getis_active().equals("Y")) return "N";
+        return "Y";
+    }
     @JsonIgnore
     public Object[] getArray() {
         Object[] arr = {
@@ -219,7 +223,8 @@ public class User {
                 this.affiliation,
                 this.department,
                 this.dob,
-                this.is_participating
+                this.is_participating,
+                this.isActive()
         };
 
         return arr;

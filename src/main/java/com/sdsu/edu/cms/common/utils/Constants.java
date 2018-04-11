@@ -19,6 +19,7 @@ public  class Constants {
     public static final String BAD_REQUEST = "bad_request";
 
     public static final String ACTIVATION_EMAIL_TITLE = "User action required - Activate account";
+    public static final String NEW_USER_ACCOUNT = "New user created at Conference Portal";
     public static final String ACTIVATION_EMAIL_BODY = "Hi,\nTo activate your account at SDSU Conference management portal, click on the activation link below.\n" +
             "Activation code: ";
     public enum NotifyMethod { ANNOUNCEMENT, UPDATE, MESSAGE, ACTIVATION};

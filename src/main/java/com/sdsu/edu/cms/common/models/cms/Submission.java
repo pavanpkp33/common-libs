@@ -10,7 +10,7 @@ import java.util.List;
 public class Submission {
 
     @JsonProperty("submission_id")
-    private String submission_id;
+    private String sid;
     @JsonProperty("conference_id")
     private String cid;
     @JsonProperty("title")
@@ -57,7 +57,7 @@ public class Submission {
     }
 
     public Submission(String submission_id, String cid, String title, Date submission_date, String submit_author_id, int track_id, String abstract_text, Date last_updated, String decision_status, String is_paid, String valid, int group_app, String[] keyword, String draftPaperUri, String finalPaperUri, String cameraReadyPaperUri) {
-        this.submission_id = submission_id;
+        this.sid = submission_id;
         this.cid = cid;
         this.title = title;
         this.submission_date = submission_date;
@@ -91,12 +91,12 @@ public class Submission {
         this.authorsList = authorsList;
     }
 
-    public String getSubmission_id() {
-        return submission_id;
+    public String getSid() {
+        return sid;
     }
 
-    public void setSubmission_id(String submission_id) {
-        this.submission_id = submission_id;
+    public void setSid(String sid) {
+        this.sid = sid;
     }
 
     public MultipartFile getDraft_paper() {
@@ -233,6 +233,22 @@ public class Submission {
 
     public void setKeyword(String[] keyword) {
         this.keyword = keyword;
+    }
+
+    public Object[] getParams(){
+        return new Object[]{
+
+                this.sid,
+                this.cid,
+                this.title,
+                this.submission_date,
+                this.submit_author_id,
+                this.track_id,
+                this.abstract_text,
+                this.last_updated,
+                this.decision_status,
+                this.group_app
+        };
     }
 
 
