@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Authors {
 
+    @JsonProperty("id")
+    private String id;
     @JsonProperty("title")
     private String title;
     @JsonProperty("first_name")
@@ -30,6 +32,14 @@ public class Authors {
         this.affiliation = affiliation;
         this.email = email;
         this.is_corresponding = is_corresponding;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTitle() {

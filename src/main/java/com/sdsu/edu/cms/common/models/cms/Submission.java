@@ -1,5 +1,6 @@
 package com.sdsu.edu.cms.common.models.cms;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,6 +17,7 @@ public class Submission {
     @JsonProperty("title")
     private String title;
     @JsonProperty("submission_date")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date submission_date;
     @JsonProperty("submit_author_id")
     private String submit_author_id;
@@ -24,6 +26,7 @@ public class Submission {
     @JsonProperty("abstract_text")
     private String abstract_text;
     @JsonProperty("last_updated")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date last_updated;
     @JsonProperty("decision_status")
     private String decision_status;
@@ -52,11 +55,15 @@ public class Submission {
     private String cameraReadyPaperUri;
     @JsonProperty("authors")
     private List<Authors> authorsList;
+    @JsonProperty("submit_author_name")
+    private String submitAuthorName;
+    @JsonProperty("submit_author_email")
+    private String submitAuthorEmail;
 
     public Submission() {
     }
 
-    public Submission(String submission_id, String cid, String title, Date submission_date, String submit_author_id, int track_id, String abstract_text, Date last_updated, String decision_status, String is_paid, String valid, int group_app, String[] keyword, String draftPaperUri, String finalPaperUri, String cameraReadyPaperUri) {
+    public Submission(String submission_id, String cid, String title, Date submission_date, String submit_author_id, int track_id, String abstract_text, Date last_updated, String decision_status, String is_paid, String valid, int group_app, String[] keyword, String draftPaperUri, String finalPaperUri, String cameraReadyPaperUri, String submitAuthorName, String submitAuthorEmail) {
         this.sid = submission_id;
         this.cid = cid;
         this.title = title;
@@ -73,6 +80,8 @@ public class Submission {
         this.draftPaperUri = draftPaperUri;
         this.finalPaperUri = finalPaperUri;
         this.cameraReadyPaperUri = cameraReadyPaperUri;
+        this.submitAuthorName  =submitAuthorName;
+        this.submitAuthorEmail = submitAuthorEmail;
     }
 
     public String getCid() {
@@ -233,6 +242,22 @@ public class Submission {
 
     public void setKeyword(String[] keyword) {
         this.keyword = keyword;
+    }
+
+    public String getSubmitAuthorName() {
+        return submitAuthorName;
+    }
+
+    public void setSubmitAuthorName(String submitAuthorName) {
+        this.submitAuthorName = submitAuthorName;
+    }
+
+    public String getSubmitAuthorEmail() {
+        return submitAuthorEmail;
+    }
+
+    public void setSubmitAuthorEmail(String submitAuthorEmail) {
+        this.submitAuthorEmail = submitAuthorEmail;
     }
 
     public Object[] getParams(){
