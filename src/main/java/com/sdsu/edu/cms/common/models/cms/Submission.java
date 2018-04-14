@@ -260,6 +260,7 @@ public class Submission {
         this.submitAuthorEmail = submitAuthorEmail;
     }
 
+    @JsonIgnore
     public Object[] getParams(){
         return new Object[]{
 
