@@ -9,6 +9,7 @@ public class EmailTemplate {
     private String password;
     private String userTemplate;
     private String submissionTemplate;
+
     public EmailTemplate(String userName, String activationLink) {
         this.userName = userName;
         this.activationLink = activationLink;
@@ -186,7 +187,7 @@ public class EmailTemplate {
                 "                                                                        <td align=\"left\" class=\"textContent\">\n" +
                 "                                                                            <!-- CONTENT // -->\n" +
                 "                                                                            <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n" +
-                "                                                                                "+
+                "                                                                                " +
                 "                                                                            </div>\n" +
                 "                                                                        </td>\n" +
                 "                                                                    </tr>\n" +
@@ -227,7 +228,7 @@ public class EmailTemplate {
                 "                                                        <tr>\n" +
                 "                                                            <td align=\"center\" valign=\"top\" class=\"textContent\">\n" +
                 "                                                                <h1 style=\"color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;\">Activation required!</h1>\n" +
-                "                                                                <h2 style=\"text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#fff;line-height:135%;\">Welcome to the Conference Management Portal, "+this.userName+".</h2>\n" +
+                "                                                                <h2 style=\"text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#fff;line-height:135%;\">Welcome to the Conference Management Portal, " + this.userName + ".</h2>\n" +
                 "                                                                <div style=\"text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#FFFFFF;line-height:135%;\">Thank you for registering. You can now submit your papers, update account information, check status of your submission, and pay the conference fee using this account.<br><span style=\"color:white;\">Click on the button below to activate your account first.</span></div>\n" +
                 "                                                            </td>\n" +
                 "                                                        </tr>\n" +
@@ -298,7 +299,7 @@ public class EmailTemplate {
                 "                                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"50%\" class=\"emailButton\" style=\"background-color: #cc0033;\">\n" +
                 "                                                        <tr>\n" +
                 "                                                            <td align=\"center\" valign=\"middle\" class=\"buttonContent\" style=\"padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;\">\n" +
-                "                                                                <a style=\"color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;\" href=\""+this.activationLink+"\" target=\"_blank\">Activate Account</a>\n" +
+                "                                                                <a style=\"color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;\" href=\"" + this.activationLink + "\" target=\"_blank\">Activate Account</a>\n" +
                 "                                                            </td>\n" +
                 "                                                        </tr>\n" +
                 "                                                    </table>\n" +
@@ -644,7 +645,7 @@ public class EmailTemplate {
                 "                                                                        <td align=\"left\" class=\"textContent\">\n" +
                 "                                                                            <!-- CONTENT // -->\n" +
                 "                                                                            <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n" +
-                "                                                                                "+
+                "                                                                                " +
                 "                                                                            </div>\n" +
                 "                                                                        </td>\n" +
                 "                                                                    </tr>\n" +
@@ -756,8 +757,8 @@ public class EmailTemplate {
                 "                                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"50%\" class=\"emailButton\" style=\"background-color: #cc0033;\">\n" +
                 "                                                        <tr>\n" +
                 "                                                            <td align=\"center\" valign=\"middle\" class=\"buttonContent\" style=\"padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;\">\n" +
-                "                                                               <p>User Name : "+ this.email+"</p>" +
-                "                                                               <p>Password : "+this.password+"</p>"+
+                "                                                               <p>User Name : " + this.email + "</p>" +
+                "                                                               <p>Password : " + this.password + "</p>" +
                 "                                                            </td>\n" +
                 "                                                        </tr>\n" +
                 "                                                    </table>\n" +
@@ -1102,7 +1103,7 @@ public class EmailTemplate {
                 "                                                                        <td align=\"left\" class=\"textContent\">\n" +
                 "                                                                            <!-- CONTENT // -->\n" +
                 "                                                                            <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n" +
-                "                                                                                "+
+                "                                                                                " +
                 "                                                                            </div>\n" +
                 "                                                                        </td>\n" +
                 "                                                                    </tr>\n" +
@@ -1214,8 +1215,8 @@ public class EmailTemplate {
                 "                                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"50%\" class=\"emailButton\" style=\"background-color: #cc0033;\">\n" +
                 "                                                        <tr>\n" +
                 "                                                            <td align=\"center\" valign=\"middle\" class=\"buttonContent\" style=\"padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;\">\n" +
-                "                                                               <p>Submission ID : "+ submissionId+"</p>" +
-                "                                                               <p>Access your submission at : "+submissionLink+"</p>"+
+                "                                                               <p>Submission ID : " + submissionId + "</p>" +
+                "                                                               <p>Access your submission at : " + submissionLink + "</p>" +
                 "                                                            </td>\n" +
                 "                                                        </tr>\n" +
                 "                                                    </table>\n" +
