@@ -168,7 +168,8 @@ public class Review {
           this.review,
           this.score,
           this.messageChair,
-          this.confidenceScore
+          this.confidenceScore,
+          this.conferenceId
         };
     }
 }
