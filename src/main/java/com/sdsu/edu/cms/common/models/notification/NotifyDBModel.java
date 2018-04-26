@@ -165,7 +165,7 @@ public class NotifyDBModel {
                 this.notification_id,
                 this.subject,
                 this.message,
-                this.created_on,
+                new Date(),
                 this.sender_id,
                 this.receiver,
                 this.is_broadcast,
